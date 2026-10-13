@@ -4,6 +4,12 @@ Lets AI agents (Claude Code, etc.) turn the [Bright VPN](https://brightvpn.com) 
 
 Bright VPN has no CLI. `brightvpn.mjs` launches the app with `--remote-debugging-port` and calls the same Electron IPC its UI uses (`connect` / `disconnect`) over the Chrome DevTools Protocol. There are no dependencies; it needs Node 22+.
 
+## Install
+
+1. Download and install the Bright VPN **Windows desktop app** from [brightvpn.com](https://brightvpn.com) (use the "Download for Windows" button). The browser extensions (Chrome, Edge, Firefox, Opera) won't work, because this script drives the desktop app.
+2. Open it once and accept the terms, so it's ready to connect.
+3. Install Node 22+.
+
 ## Usage
 
 ```
