@@ -13,9 +13,9 @@ Bright VPN has no CLI. `brightvpn.mjs` launches the app with `--remote-debugging
 ## Usage
 
 ```
-node brightvpn.mjs status [CC]   # "US 1.2.3.4 City (org)" — exit 0 if country == CC (default US)
-node brightvpn.mjs on [CC]       # connect, wait until IP is in CC
-node brightvpn.mjs off           # disconnect, wait until IP changes
+node skills/brightvpn/brightvpn.mjs status [CC]   # "US 1.2.3.4 City (org)" — exit 0 if country == CC (default US)
+node skills/brightvpn/brightvpn.mjs on [CC]       # connect, wait until IP is in CC
+node skills/brightvpn/brightvpn.mjs off           # disconnect, wait until IP changes
 ```
 
 Optional: run `npm link` to put `brightvpn` on your PATH.
@@ -24,13 +24,13 @@ Environment overrides: `BRIGHTVPN_EXE` (app path), `BRIGHTVPN_PORT` (DevTools po
 
 ## Agent skill
 
-`skills/brightvpn/SKILL.md` is a Claude Code skill. Link it into your skills folder:
+`skills/brightvpn/` is a self-contained Claude Code skill (the script lives next to `SKILL.md`, which references it via `${CLAUDE_SKILL_DIR}`). Link it into your skills folder:
 
 ```powershell
 New-Item -ItemType Junction -Path "$HOME\.claude\skills\brightvpn" -Target "$PWD\skills\brightvpn"
 ```
 
-If you cloned the repo somewhere else, update the script path in `SKILL.md`.
+Or just copy `skills/brightvpn` into `~/.claude/skills/`. Either way works from any location; nothing needs editing.
 
 ## Caveats
 
