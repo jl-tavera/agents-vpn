@@ -6,9 +6,9 @@ description: Turn the Bright VPN desktop app on or off, or check the current pub
 # Bright VPN
 
 ```
-node C:/Users/jltav/Dev/personal/agents_vpn/brightvpn.mjs status [CC]  # prints "COUNTRY IP city (org)"; exit 0 if country == CC (default US)
-node C:/Users/jltav/Dev/personal/agents_vpn/brightvpn.mjs on [CC]      # connect (default US); waits until the IP is in CC
-node C:/Users/jltav/Dev/personal/agents_vpn/brightvpn.mjs off          # disconnect; waits until the IP changes
+node "${CLAUDE_SKILL_DIR}/brightvpn.mjs" status [CC]  # prints "COUNTRY IP city (org)"; exit 0 if country == CC (default US)
+node "${CLAUDE_SKILL_DIR}/brightvpn.mjs" on [CC]      # connect (default US); waits until the IP is in CC
+node "${CLAUDE_SKILL_DIR}/brightvpn.mjs" off          # disconnect; waits until the IP changes
 ```
 
 - Run `status` first. If it's already in the right country, do nothing.

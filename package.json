@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "CLI + agent skill to toggle the Bright VPN desktop app on Windows",
   "type": "module",
-  "bin": { "brightvpn": "brightvpn.mjs" },
+  "bin": { "brightvpn": "skills/brightvpn/brightvpn.mjs" },
   "engines": { "node": ">=22" },
   "os": ["win32"],
   "license": "MIT"
